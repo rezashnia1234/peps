@@ -8,6 +8,7 @@
             if (networkStatus === 'Connection.UNKNOWN' || networkStatus === 'Connection.NONE') {
                 myNotif();
             } else {
+                navigator.splashscreen.show();
                 setTimeout(function () {
                     window.open = cordova.InAppBrowser.open;
                     loadUrl('http://mos.parseps.com');
